@@ -2,10 +2,10 @@ from django.urls import path
 from AppMensajes.views import *
 
 urlpatterns = [
-    path('', inicio),
-    path('usuario/', usuario),
-    path('analista/', analista),
-    path('mensaje/', mensaje),
-    path('vacante/', vacante),
+    path('', inicio, name='inicio'),
+    path('usuario/', usuario, name="usuario"),
+    path('analista/', analista, name="analista"),
+    path('mensaje/', mensaje, name="mensaje"),
+    path('vacante/', vacante, name="vacante"),
     
 ]
