@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> FORMULARIO USUARIO </h1>
+{% endblock %}
+
+{% block contenido %}
+<h1> FORMULARIO DE USUARIOS </h1>
+
+<form action="{% url 'usuario_form' %}" method="POST"> {% csrf_token %}
+<p> nombre <input type="text" name="nombre"> </p> 
+<p> apellido <input type="text" name="apellido"> </p> 
+<p> identificacion <input type="text" name="identificacion"> </p> 
+<p> email <input type="text" name="email"> </p> 
+<input type="submit" value="Enviar datos"
+
+{% endblock %}

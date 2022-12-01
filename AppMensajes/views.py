@@ -18,3 +18,20 @@ def mensaje(request):
 
 def vacante(request):
     return render (request, "vacante.html")
+
+def usuario_form(request):
+    
+    if request.method=="POST":
+        nombreusuario = Usuario (Nombre=request.POST["nombre"])
+        apellidousuario = Usuario (Apellido=request.POST["apellido"])
+        identificacionusuario = Usuario(Identificacion = request.POST["identificacion"])
+        emailusuario = Usuario (Email =request.POST["email"])
+        
+        nombreusuario.save()
+        apellidousuario.save()
+        identificacionusuario.save()
+        emailusuario.save()
+        
+        return render(request, "inicio.html")
+    
+    return render (request, "usuario_form.html")
