@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> PÁGINA DE MENSAJES </h1>
+{% endblock %}
+
+{% block contenido %}
+<h1> ESCRIBA SU MENSAJES </h1>
+
+<form action="{% url 'mensaje_form' %}" method="POST"> {% csrf_token %}
+    <p> mensaje <input type="text" name="mensaje"> </p> 
+    <p> cuerpo <input type="text" name="cuerpo"> </p> 
+    <p> para <input type="text" name="para"> </p> 
+    <input type="submit" value="Enviar datos"
+
+{% endblock %}

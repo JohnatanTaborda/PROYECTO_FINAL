@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> PÁGINA DE VACANTES </h1>
+{% endblock %}
+
+{% block contenido %}
+<h1> CREE LA VACANTE </h1>
+
+<form action="{% url 'vacante_form' %}" method="POST"> {% csrf_token %}
+    <p> nom_vacante <input type="text" name="vacante"> </p> 
+    <p> id_vacante <input type="text" name="id"> </p> 
+    <input type="submit" value="Enviar datos"
+
+{% endblock %}

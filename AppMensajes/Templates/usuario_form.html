@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block contenido %}
-<h1> FORMULARIO DE USUARIOS </h1>
+<h1> CREE UN USUARIO </h1>
 
 <form action="{% url 'usuario_form' %}" method="POST"> {% csrf_token %}
 <p> nombre <input type="text" name="nombre"> </p> 

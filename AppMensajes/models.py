@@ -21,7 +21,7 @@ class Mensaje (models.Model):
     
     Asunto = models.CharField(max_length=200)
     Cuerpo = models.CharField(max_length=500)
-    
+    Para = models.EmailField()
 
 class Vacante (models.Model):
     
