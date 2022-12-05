@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> RESULTADOS DE BUSQUEDA DE USUARIOS </h1>
+{% endblock %}
+
+{% block contenido %}
+
+<u1>
+    {% for usuario in usuarios %}
+        <p> {{ usuario }}
+    {% endfor %}
+</u1>
+
+
+{% endblock %}

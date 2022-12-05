@@ -32,6 +32,7 @@ def usuario_form(request):
         usuario1.save()
         
         return render(request, "usuario.html")
+        #return render(request, "inicio.html", { "contenido": "Usuario creado correctamente" })
     
     return render (request, "usuario_form.html")
 
@@ -83,3 +84,20 @@ def vacante_form(request):
         return render(request, "vacante.html")
     
     return render (request, "vacante_form.html")
+
+
+
+def buscarusuario (request):
+    return render (request, "buscarusuario.html")
+
+
+def buscar(request):
+    
+    if request.GET["identificacion_usuario"]:
+        usuario=request.GET["identificacion_usuario"]
+        usuarios= Usuario.objects.filter(Identificacion=usuario)
+    
+        return render (request, "resultadosbusqueda.html", {"usuarios": usuarios})
+    
+    else:
+        return render(request, "buscarusuario.html", {"mensaje": "Ingresa una identificación de usuario" })

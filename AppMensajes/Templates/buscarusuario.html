@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> BUSQUEDA DE USUARIOS </h1>
+{% endblock %}
+
+{% block contenido %}
+
+<form action = "{% url 'buscar' %}" method="GET">
+    <input type="number" name= "identificacion_usuario" id="identificacion_usuario">
+    <input type="submit" value="buscar">
+
+</form>
+{{ mensaje }}
+
+{% endblock %}
