@@ -96,7 +96,7 @@ def buscar(request):
     if request.GET["identificacion_usuario"]:
         usuario=request.GET["identificacion_usuario"]
         usuarios= Usuario.objects.filter(Identificacion=usuario)
-    
+        
         return render (request, "resultadosbusqueda.html", {"usuarios": usuarios})
     
     else:

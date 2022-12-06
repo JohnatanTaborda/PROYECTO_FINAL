@@ -8,11 +8,18 @@
 
 {% block contenido %}
 
-<u1>
-    {% for usuario in usuarios %}
-        <p> {{ usuario }}
-    {% endfor %}
-</u1>
+{% for usuario in usuarios %}
 
+    <P> {{ usuario }} </P>
+
+{% endfor %}
+
+<br>
+<hr>
+<center>
+    <h2>
+        <a class="fcc-btn" href="http://127.0.0.1:8000/AppMensajes/buscarusuario/">Nueva búsqueda</a>
+    </h2>
+</center>
 
 {% endblock %}

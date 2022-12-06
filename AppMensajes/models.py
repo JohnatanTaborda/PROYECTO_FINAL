@@ -7,6 +7,9 @@ class Usuario (models.Model):
     Identificacion = models.IntegerField()
     Email = models.EmailField()
     
+    def __str__(self):
+        return self.Nombre+" "+self.Apellido+" "+str(self.Identificacion)+" "+self.Email
+    
     
 class Analista (models.Model):
     
@@ -16,14 +19,24 @@ class Analista (models.Model):
     Identificacion = models.IntegerField()
     Email = models.EmailField()
     
+    def __str__(self):
+        return self.Nombre+" "+self.Apellido+" "+self.Rol+" "+str(self.Identificacion)+" "+self.Email
+    
 
 class Mensaje (models.Model):
     
     Asunto = models.CharField(max_length=200)
     Cuerpo = models.CharField(max_length=500)
     Para = models.EmailField()
+    
+    def __str__(self):
+        return self.Asunto+" "+self.Cuerpo+" "+self.Para
+
 
 class Vacante (models.Model):
     
     Nom_Vacante = models.CharField(max_length=80)
     Id_Vacante = models.IntegerField()
+    
+    def __str__(self):
+        return self.Nom_Vacante+" "+str(self.Id_Vacante)

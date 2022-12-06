@@ -11,6 +11,6 @@ urlpatterns = [
     path('analista_form/', analista_form, name="analista_form"),
     path('mensaje_form/', mensaje_form, name="mensaje_form"),
     path('vacante_form/', vacante_form, name="vacante_form"),
-    path('buscarusuario/', buscarusuario, name="buscarcomision"),
+    path('buscarusuario/', buscarusuario, name="buscarusuario"),
     path('buscar/', buscar, name="buscar"),
 ]
